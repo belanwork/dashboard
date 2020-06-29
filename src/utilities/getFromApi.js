@@ -1,12 +1,9 @@
 export async function getFromApi(action) {
     const GITHUB = `https://api.github.com`
-    const key1 = '9a17044'
-    const key2 = 'a38109e'
-    const key3 = 'b93e1f9'
-    const key4 = '97ecd31'
-    const key5 = '71e69c6227ec'
+    const key1 = '6e145467df61491aa0e'
+    const key2 = '923c275804ddffd2c5139'
     const headers = {
-        "Authorization": `Token ${key1+key2+key3+key4+key5}`
+        "Authorization": `Token ${key1+key2}`
     }
     const prop = {
         method : "GET",
