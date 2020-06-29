@@ -1,0 +1,17 @@
+.componentContainer {
+    background-color: #24292e;
+}
+
+.wrapper {
+    margin: 0 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article {
+    margin: 8px;
+    font-size: 14px;
+    color: gold;
+    font-style: italic;
+    padding: 5px;
+}

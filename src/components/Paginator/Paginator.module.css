@@ -1,0 +1,30 @@
+.componentContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #24292E;
+    border-radius: 25px;
+    font-size: 25px;
+}
+
+
+.arrowLeft,
+.arrowRight {
+    width: 20px;
+    height: 20px;
+    border-top: 10px solid #6E18C0;
+    border-right: 10px solid #6E18C0;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+    border-color: #74f5b0;
+}
+
+.arrowLeft {
+    transform: rotate(-135deg);
+}
+
+.arrowRight {
+    transform: rotate(45deg);
+}

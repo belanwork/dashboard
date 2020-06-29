@@ -1,0 +1,25 @@
+.componentContainer {
+    margin: 8px;
+}
+
+.inputString {
+    background-color: hsla(0,0%,100%,.125);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.inputSubmit {
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: hsla(0,0%,100%,.125);
+}
+
+.inputSubmit:hover {
+    color: gold;
+}
+
