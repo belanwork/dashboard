@@ -1,7 +1,7 @@
 export async function getFromApi(action) {
     const GITHUB = `https://api.github.com`
     const headers = {
-        "Authorization": "Token 98d72e6165d866a498e6bdee9e5341d79ae7e016"
+        "Authorization": "Token 53658412f9239f866d2cd0034b5482e51a63add6"
     }
     const prop = {
         method : "GET",
@@ -10,14 +10,14 @@ export async function getFromApi(action) {
 
     switch (action.type) {
         case 'GET_TEN_POPULAR_REPOS': {
-            const response = await fetch(`http://127.0.0.1:3001/`)
+            const response = await fetch(`http://37.146.240.47:3001/`)
                 .then(res => res.ok ? res.json() : Promise.reject(res))
                 .catch(error => error.json())
             return response
         }
         case 'GET_SEARCH_REPOS': {
             const { value, page } = action
-            const response = await fetch(`${GITHUB}/search/repositories?q=${value}&sort=stars&order=desc&page=${page}&per_page=10`, prop)
+            const response = await fetch(`${GITHUB}/search/repositories?q=${value}&sort=stars&order=desc&page=${page}&per_page=10`,prop)
                 .then(res => res.ok ? res.json() : Promise.reject(res))
                 .catch(error => console.log(error))
             return response
@@ -38,6 +38,6 @@ export async function getFromApi(action) {
             return response
         }
         default:
-            console.log('WRONG API CASE')
+            console.log('Nothing')
     }
 } 
