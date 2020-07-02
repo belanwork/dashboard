@@ -16,6 +16,8 @@
 
 API GitHub не предусматривает поиск репозиториев из раздела [TRENDING](https://github.com/trending), поэтому мною было принятно решение по созданию собственного API. Я создал его с помощью [NodeJS Express](https://github.com/belanwork/trendingAPI) и [Python](https://github.com/belanwork/trendingAPI/blob/master/python/script.py). Раз в 10 минут, Express запускает Python скрипт, который получает весь html код, парсит и записывает результат в файл. [Сервер](http://belan.ml/) возвращает результат из [файла](https://github.com/belanwork/trendingAPI/blob/master/python/result/result.txt).
 
+Так же там не указывается дата последнего commit, поэтому я вместо last commit добавил stars today.
+
 Остальная часть задания взаимодействует с API GitHub.
 
 ### API ключ

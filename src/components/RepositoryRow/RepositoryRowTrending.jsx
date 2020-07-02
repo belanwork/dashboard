@@ -9,7 +9,7 @@ export const RepositoryRowTrending = props => {
     }
     return (
         <tr>
-            <td onClick={goToRepo}>{name}</td>
+            <td onClick={goToRepo} className="link">{name}</td>
             <td>{stars}</td>
             <td>{starsToday}</td>
             <td>

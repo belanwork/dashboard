@@ -5,7 +5,7 @@ import { NavLink, useParams, useHistory } from 'react-router-dom';
 export const Paginator = props => {
   const { page, value } = useParams()
   const { totalCount } = props
-  const startPage = parseInt(page / 10) * 10 + 1
+  const startPage = parseInt(!(page % 10) ? page/10 - 1 : page / 10) * 10 + 1
   const totalPages = Math.round(totalCount / 10)
   const stepArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -23,13 +23,13 @@ export const Paginator = props => {
   })
   const history = useHistory()
   const goBack = () => {
-    const checkerValue = +page - 10
+    const checkerValue = +page - 1
     const backValue = checkerValue <= 0 ? 1 : checkerValue
     return history.push(`/search/${value}/${backValue}`)
   }
 
   const goForward = () => {
-    const checkerValue = +page + 10
+    const checkerValue = +page + 1
     const forwardValue = checkerValue <= totalPages ? checkerValue : totalPages
     return history.push(`/search/${value}/${forwardValue}`)
   }
