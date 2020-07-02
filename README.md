@@ -16,11 +16,11 @@
 API GitHub не предусматривает поиск репозиториев из раздела [TRENDING](https://github.com/trending), поэтому мною было принятно решение по созданию собственного API. Я создал его с помощью [NodeJS Express](https://github.com/belanwork/trendingAPI) и [Python](https://github.com/belanwork/trendingAPI/blob/master/python/script.py). Раз в 10 минут, Express запускает Python скрипт, который получает весь html код, парсит и записывает результат в файл. [Сервер](http://belan.ml/) возвращает результат из [файла](https://github.com/belanwork/trendingAPI/blob/master/python/result/result.txt).
 
 
-### `API ключ'
+### API ключ
 
 API ключ указан не мой, я создал дополнительный фейковый аккаунт. Однако GitHub тщательно проверяет файлы на содержание API ключа, поэтому я разделил его на несколько частей, чтобы избежать постоянной блокировки ключа.
 
 
-### `React Hooks'
+### React Hooks
 
 Веб приложение было созданно с использованием Hooks. Однако я так же мог бы его переписать через Redux или Class Components. 
