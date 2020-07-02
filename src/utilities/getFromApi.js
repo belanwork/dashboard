@@ -12,7 +12,7 @@ export async function getFromApi(action) {
 
     switch (action.type) {
         case 'GET_TEN_POPULAR_REPOS': {
-            const response = await fetch(`http://37.146.240.47:3001/`)
+            const response = await fetch(`http://belan.ml/`)
                 .then(res => res.ok ? res.json() : Promise.reject(res))
                 .catch(error => error.json())
             return response
